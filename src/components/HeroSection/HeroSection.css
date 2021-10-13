@@ -1,0 +1,101 @@
+h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-family: 'Playfair Display', serif;}
+
+.hero-content {
+    max-width: 500px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    color: black;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.hero-container{
+    background: url(../HeroSection/portada.jpg) center center/cover no-repeat;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    /*padding-top: 90px;*/
+}
+
+@media screen and (max-width: 960px){
+    .hero-content{
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+.hero-btns {
+    margin-top: 20px;
+
+}
+
+.hero-btns .btn {
+    margin: 6px;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Petrona', serif;
+}
+
+@media screen and (max-width: 960px) {
+    .hero-content {
+        max-width: 500px;
+        background: rgba(255, 255, 255, 0.4);
+        margin-top: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content {
+        max-width: 500px;
+        background: rgba(255, 255, 255, 0.4);
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+    .btn {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .hero-content {
+        max-width: 400px;
+        background: rgba(255, 255, 255, 0.4);
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+    .btn {
+        width: 45%;
+
+    }
+}
+
+
