@@ -1,6 +1,8 @@
 import React from "react";
 import {useData} from "../../hooks/useData";
 import {Brand} from "./brand";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 /***
  * "Container" contiene el resultado de iterar todas las marcas y modelarlas en el componente "Brand".
@@ -12,18 +14,30 @@ import {Brand} from "./brand";
  * Este componente es el que debe ser llamado desde donde se modele la pagina "Home".
  */
 
-export const Container = () =>{
+const responsive = {
+    0: { items: 1 },
+    568: { items: 2 },
+    1024: { items: 3 },
+};
+
+
+export const Gallery = () => {
+
     const { docs: brands } = useData('Marcas');
 
-    // TODO hacer que se vea bien bonito.
+    let items = [];
+
+    brands.map((brand) =>
+        items.push(<Brand key={brand.id} brand={brand}/>)
+    )
 
     return (
-        <div>
-            {
-                brands.map((brand) =>
-                    <Brand key={brand.id} brand={brand}/>
-                )
-            }
-        </div>
-    )
+        <AliceCarousel mouseTracking items={items} responsive={responsive}
+                       controlsStrategy="alternate" />
+    );
 }
+
+
+
+
+

@@ -11,18 +11,11 @@
  */
 
 export const Brand = ({ brand }) => {
-    const { id, nombre, logo } = brand;
+    const { id, nombre , logo } = brand;
 
-    // TODO hacer que se vea bien bonito.
+    return{
+        img: {logo},  //<img src={logo} alt={id}/>,
+        nombre: {nombre}
+    }
 
-    return (
-        <div className={id}>
-            <div className='brand_image'>
-                <img src={logo} alt={id}/>
-            </div>
-            <div className='brand_name'>
-                <p> El nombre es "{nombre}".</p>
-            </div>
-        </div>
-    )
 }

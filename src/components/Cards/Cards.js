@@ -13,17 +13,18 @@ function Cards() {
                     <ul className='cards__items'>
                         <CardItem
                             src={Masculino}
-                            label='Masculino'
+                            text='Masculino'
                             path='/Catalogo'
                         />
                         <CardItem
                             src={Accesorios}
-                            label='Accesorios'
+                            text='Accesorios'
                             path='/Catalogo'
+                            id="accesorio"
                         />
                         <CardItem
                             src={Femenino}
-                            label='Femenino'
+                            text='Femenino'
                             path='/Catalogo'
                             />
                     </ul>

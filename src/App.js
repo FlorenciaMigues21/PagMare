@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar"
 import Home from './components/pages/Home'
+import Footer from "./components/Footer/Foooter"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
                     <Route path='/' exact component={Home} />
                 </Switch>
             </Router>
+
             </>
 
   );
