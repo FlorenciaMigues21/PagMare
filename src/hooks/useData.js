@@ -7,7 +7,7 @@ export const useData = (collectionName) => {
         const unsub = db.collection(collectionName)
             .onSnapshot(snap => {
                 const documents = [];
-                console.log(documents);
+                //console.log(documents);
                 snap.forEach(doc => {
                     documents.push({id: doc.id, ...doc.data()})
                 });

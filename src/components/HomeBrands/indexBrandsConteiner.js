@@ -23,13 +23,21 @@ const responsive = {
 
 export const Gallery = () => {
 
+    console.log("En gallery")
+
     const { docs: brands } = useData('Marcas');
+
+    console.log("Brands:",brands);
 
     let items = [];
 
     brands.map((brand) =>
         items.push(<Brand key={brand.id} brand={brand}/>)
     )
+
+    console.log("Items:",items);
+
+
 
     return (
         <AliceCarousel mouseTracking items={items} responsive={responsive}

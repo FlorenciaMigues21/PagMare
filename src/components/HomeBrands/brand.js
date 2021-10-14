@@ -13,9 +13,10 @@
 export const Brand = ({ brand }) => {
     const { id, nombre , logo } = brand;
 
-    return{
-        img: {logo},  //<img src={logo} alt={id}/>,
-        nombre: {nombre}
-    }
-
+    return (
+        <div>
+            <img src={logo} alt={id}/>
+            <h2>{nombre}</h2>
+        </div>
+    )
 }
