@@ -3,6 +3,7 @@ import {useData} from "../../hooks/useData";
 import {Brand} from "./brand";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import './brands.css'
 
 /***
  * "Container" contiene el resultado de iterar todas las marcas y modelarlas en el componente "Brand".

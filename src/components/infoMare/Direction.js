@@ -9,21 +9,35 @@ function Direction(){
             <Grid container direction="row"
                       justifyContent="center"
                       alignItems="center" className="col">
-                <Grid item xs={12} xl={6} sm={12} md={6} className="item1">
-                    <h3>Visitanos</h3>
-                    <p>
-                        Av.Rosales 122, 28021
-                    </p>
-                    <h3>Contáctanos</h3>
-                    <p>
-                        Mail: mare.multimarca@gmail.com
-                    </p>
-                    <p>
-                        Instagram: mare.multimarca.uy
-                    </p>
-                    <p>
-                        Tel:12345678
-                    </p>
+                <Grid item xs={12} xl={6} sm={12} md={6} className="item1" data-aos="fade-up">
+                    <div className="direccion">
+                        <h3>Visitanos</h3>
+                        <ul className="lista">
+                            <li>
+                                <i className="fa fa-map-marker" aria-hidden="true">
+                                </i>
+                                <p>Av.Rosales 122, 28021</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div className="contacto">
+                        <h3>Contáctanos</h3>
+                        <ul className="lista">
+                            <li>
+                                <i className="fa fa-instagram" aria-hidden="true"> </i>
+                                <p>mare.multimarca.uy</p>
+                            </li>
+                            <li>
+                                <i className="fa fa-envelope" aria-hidden="true"> </i>
+                                <p>mare.multimarca@gmail.com</p>
+                            </li>
+                            <li>
+                                <i className="fa fa-phone" aria-hidden="true"> </i>
+                                <p>Tel:1234567</p>8
+                            </li>
+                        </ul>
+                    </div>
                 </Grid>
                 <Grid item xs={12} xl={6} sm={12} md={6} className="item2">
                     <a href="https://goo.gl/maps/6wTXLbBCk6BfznQw7"><img src={mapa} alt="mapa"/></a>

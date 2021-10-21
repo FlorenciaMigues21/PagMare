@@ -1,0 +1,25 @@
+.alice-carousel{
+    width: 80%;
+    margin-top: 50px;
+}
+.alice-carousel__stage-item{
+    height: 80%;
+}
+
+.alice-carousel__stage-item div{
+    display: grid;
+    align-items: center;
+    object-position: center;
+    object-fit: contain;
+}
+.alice-carousel img {
+    width: 225px;
+    margin: auto;
+}
+.alice-carousel h2 {
+    font-size: 25px;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+

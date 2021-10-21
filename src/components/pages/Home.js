@@ -4,15 +4,17 @@ import HeroSection from "../HeroSection/HeroSection";
 import Cards from '../Cards/Cards'
 import InfoSection from '../infoMare/infoSection'
 import Direction from '../infoMare/Direction'
-
+import {Gallery} from '../HomeBrands/indexBrandsConteiner'
 
 function Home() {
     return (
         <>
             <HeroSection />
             <Cards />
+            <Gallery />
             <InfoSection />
             <Direction />
+
         </>
     );
 }
