@@ -1,0 +1,159 @@
+.col {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+
+}
+
+.infoInicial .item1{
+    background-color:#3c564f;
+    object-position: center;
+    padding: 5%;
+    color: white;
+    font-weight: 400;
+    line-height: 1.7;
+    font-family: "Nunito Sans",sans-serif;
+}
+.infoInicial .item2{
+    background-color:#abc2b8;
+    padding: 5%;
+
+}
+.infoInicial .item2 img{
+    max-width: 125%;
+    height: auto;
+    float: left;
+
+}
+.infoInicial h2{
+    font-size: 60px;
+    text-align: center;
+    padding-top: 20px;
+    font-family: "Cinzel",serif;
+}
+
+
+/*.infoInicial p{
+    color: #646D77;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.7;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    text-align: center !important;
+}*/
+.columnas {
+    width: 100%;
+}
+.columnas h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-family: "Nunito Sans",sans-serif;}
+
+.columnas p{
+    font-size: 15px;
+    font-family: "Nunito Sans",sans-serif;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0 0 15px 0;
+}
+
+@media screen and (max-width: 959px){
+    .infoInicial .item1{
+        padding: 10%;
+
+    }
+    .infoInicial h2{
+        font-size: 40px;
+        text-align: center;
+        padding-top: 20px;
+        font-family: "Cinzel",serif;
+
+    }
+    .infoInicial .item2{
+        padding: 0;
+    }
+
+    .infoInicial .item2 img{
+        max-width: 100%;
+        height: auto;
+
+    }
+    .columnas h2{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 1.2;
+        font-family: "Nunito Sans",sans-serif;
+        text-align: center;
+    }
+
+
+    .columnas p{
+        font-size: 15px;
+        font-family: "Nunito Sans",sans-serif;
+        font-weight: 400;
+        line-height: 25px;
+        margin: 0 0 15px 0;
+    }
+}
+
+@media screen and (min-width: 1920px){
+    .infoInicial .item1{
+        font-size: 20px;
+    }
+    .infoInicial .item2{
+        padding: 3%;
+
+    }
+    .infoInicial .item2 img{
+        max-width: 115%;
+        height: auto;
+
+    }
+
+}
+/*
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated:{
+    animation-duration: 1s;
+    animation-fill-mode: initial;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}*/

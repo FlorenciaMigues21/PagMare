@@ -6,7 +6,7 @@ function HeroSection() {
     return (
         <div  className="hero-container">
             <div className="hero-content">
-                <h2 className="portada">¡GRAN APERTURA!</h2>
+                <h2 className="portada" data-aos="fade-up">¡GRAN APERTURA!</h2>
                 <div className="hero-btns">
                     <Button className="btns" buttonStyle="btn--outline" buttonSize="btn--large">
                         Ver catálogo

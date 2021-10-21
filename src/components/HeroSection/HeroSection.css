@@ -21,12 +21,6 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
     /*padding-top: 90px;*/
 }
 
-@media screen and (max-width: 960px){
-    .hero-content{
-        max-width: 300px;
-        justify-content: center;
-    }
-}
 .hero-btns {
     margin-top: 20px;
 
@@ -36,9 +30,23 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
     margin: 6px;
     background-color: black;
     border-radius: 10px;
-    font-size: 15px;
-    font-family: 'Petrona', serif;
+    font-family: "Poppins",sans-serif;
+    text-transform: capitalize;
+    padding: 20px 35px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
+
+
+
+@media screen and (max-width: 960px){
+    .hero-content{
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
 @media screen and (min-width: 2000px){
     .hero-content {
         max-width: 500px;
@@ -63,6 +71,17 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
         font-size: 40px;
 
     }
+    .hero-btns {
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+    .hero-btns .btn {
+        display: block;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 17px 34px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -78,13 +97,7 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
 
     }
 
-    .btn-mobile {
-        display: block;
-        text-decoration: none;
-    }
-    .btn {
-        width: 50%;
-    }
+
 }
 
 @media screen and (max-width: 400px){
@@ -95,19 +108,6 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
         margin-top: auto;
     }
 
-    .hero-content h2 {
-        font-size: 35px;
-
-    }
-
-    .btn-mobile {
-        display: block;
-        text-decoration: none;
-    }
-    .btn {
-        width: 45%;
-
-    }
 }
 
 
