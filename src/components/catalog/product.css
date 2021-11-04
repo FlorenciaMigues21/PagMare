@@ -1,0 +1,56 @@
+.product{
+    padding-left: 25px;
+    padding-right: .21429rem;
+}
+.product .imagen{
+    display: flex;
+    margin: auto;
+    width: auto;
+}
+.product .imagen img{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+}
+.productBrand{
+    position: relative;
+    display: inline;
+    text-align: right;
+}
+
+
+.productInfo{
+    /*height: 100px;
+    /*margin-bottom: 15px;*/
+}
+.productInfo h1{
+    font-family: "Nunito Sans",sans-serif;
+    font-size: .88571rem;
+    text-align: left;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    /*line-height: 1.5;*/
+}
+
+
+.productPrice{
+    /*margin-top: 5px;*/
+    font-family: "Nunito Sans",sans-serif;
+    font-size: .88571rem;
+    text-align: left;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    line-height: 1.5;
+    opacity:50%;
+}
+
+
+
+.product > button{
+    background-color: #ca1515;
+    border: 1px solid;
+
+}
