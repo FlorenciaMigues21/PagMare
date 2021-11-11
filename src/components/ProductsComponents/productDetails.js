@@ -14,7 +14,7 @@ const ProductDetails = () => {
 
     prom.then(function(prod){
         if (prod.exists){
-            const { Nombre, Caracteristicas, Precio, Fotos, Marca, Descripcion } = prod;
+            const { Nombre, Caracteristicas, Precio, Fotos, Marca, Descripcion } = prod.data();
             ReactDOM.render(
                 <div>
                     <div className="blog-details">

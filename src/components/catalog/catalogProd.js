@@ -3,7 +3,8 @@ import { Product } from './product'
 import './catalogProd.css'
 import {useData} from "../../hooks/useData";
 import {Grid} from "@mui/material";
-
+import ButtonAppBar from '../catalog/navbarCat'
+import "@progress/kendo-theme-default/dist/all.css";
 
 function CatalogProd(){
 
@@ -19,23 +20,27 @@ function CatalogProd(){
             </Grid>
         )
     )
-    if (items.lenght > 0){
-        for (let i=0; i<items.lenght; i++){
-            if (filter[items[i].props.prod.Caracteristicas] == null){
-                filter[items[i].props.prod.Caracteristicas] = [i];
+
+    if (items.length > 0){
+        for (let i=0; i<items.length; i++) {
+            if (filter[items[i].props.children.props.prod.Caracteristicas] == null) {
+                filter[items[i].props.children.props.prod.Caracteristicas] = [i];
             } else {
-                filter[items[i].props.prod.Caracteristicas].push(i);
+                filter[items[i].props.children.props.prod.Caracteristicas].push(i);
             }
         }
     }
 
     return(
-        <div className="catalogRow">
-            <Grid className="productsCol" container justify="center" spacing={4}>
-                {
-                    items
-                }
-            </Grid>
+        <div id="page">
+            <ButtonAppBar/>
+            <div className="catalogRow">
+                <Grid className="productsCol" container justify="center" spacing={4}>
+                    {
+                        items
+                    }
+                </Grid>
+            </div>
         </div>
     )
 }
