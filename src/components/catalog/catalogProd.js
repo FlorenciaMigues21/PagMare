@@ -1,10 +1,11 @@
 import React from "react";
 import { Product } from './product'
 import './catalogProd.css'
-import {useData} from "../../hooks/useData";
-import {Grid} from "@mui/material";
-import ButtonAppBar from '../catalog/navbarCat'
+import { useData } from "../../hooks/useData";
+import { Grid } from "@mui/material";
+import { ButtonAppBar } from '../catalog/navbarCat'
 import "@progress/kendo-theme-default/dist/all.css";
+import * as ReactDOM from "react-dom";
 
 function CatalogProd(){
 
@@ -29,11 +30,18 @@ function CatalogProd(){
                 filter[items[i].props.children.props.prod.Caracteristicas].push(i);
             }
         }
+        ReactDOM.render(
+            <div>
+                <ButtonAppBar list={filter}/>
+            </div>,
+            document.getElementById('filters')
+        );
     }
 
     return(
         <div id="page">
-            <ButtonAppBar/>
+            <div id='filters'>
+            </div>
             <div className="catalogRow">
                 <Grid className="productsCol" container justify="center" spacing={4}>
                     {
@@ -46,12 +54,3 @@ function CatalogProd(){
 }
 
 export default CatalogProd;
-
-
-/*
-prods.map((product) => (
-                    <Grid key={product.id} item xs={12} sm={6} md={4} lg={4}>
-                        <Product key={product.id} prod={product}/>
-                    </Grid>
-                ))
- */

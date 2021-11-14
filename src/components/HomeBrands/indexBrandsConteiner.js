@@ -38,8 +38,6 @@ export const Gallery = () => {
 
     console.log("Items:",items);
 
-
-
     return (
         <AliceCarousel mouseTracking items={items} responsive={responsive}
                        controlsStrategy="alternate" />

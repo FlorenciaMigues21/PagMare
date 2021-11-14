@@ -53,7 +53,7 @@ const StyledMenu = styled((props) => (
         },
     },
 }));
-export default function ButtonAppBar() {
+export const ButtonAppBar = ({ list }) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -62,6 +62,17 @@ export default function ButtonAppBar() {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    let items = []
+
+    for (const [key] of Object.entries(list)) {
+        items.push(
+            <MenuItem onClick={handleClose} disableRipple>
+                {key}
+            </MenuItem>
+        )
+    }
+
     return (
         <Box sx={{ flexGrow: 1,boxShadow: "none" }}>
             <AppBar position="static" elevation={0} style={{background: 'white'}}>
@@ -86,24 +97,9 @@ export default function ButtonAppBar() {
                         open={open}
                         onClose={handleClose}
                     >
-                        <MenuItem onClick={handleClose} disableRipple>
-                            Indumentaria Femenina
-                        </MenuItem>
-                        <MenuItem onClick={handleClose} disableRipple>
-                            Vestidos
-                        </MenuItem>
-                        <MenuItem onClick={handleClose} disableRipple>
-                            Tops
-                        </MenuItem>
-                        <MenuItem onClick={handleClose} disableRipple>
-                            Pantalones
-                        </MenuItem>
-                        <MenuItem onClick={handleClose} disableRipple>
-                            Calzado
-                        </MenuItem>
-                        <MenuItem onClick={handleClose} disableRipple>
-                            Indumentaria Masculina
-                        </MenuItem>
+                        {
+                            items
+                        }
                     </StyledMenu>
                 </Toolbar>
             </AppBar>

@@ -11,6 +11,7 @@ const ProductDetails = () => {
     const idProd = useParams()
     console.log("idProd: ", idProd.id)
     let prom = getDoc(doc(db, 'Productos', idProd.id))
+    console.log("Promise: ", prom)
 
     prom.then(function(prod){
         if (prod.exists){
