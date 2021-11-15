@@ -12,9 +12,9 @@ export const Product = ({ prod }) => {
                 <h4>{Marca}</h4>
             </div>
             <div className="imagen">
-                <Link to={`/product/${id}`}>
+                <a href={`/product/${id}`}>
                     <img src={ Fotos[0] } alt={id}/>
-                </Link>
+                </a>
             </div>
             <div className="productInfo">
                 <h1>{Nombre}</h1>
@@ -26,3 +26,4 @@ export const Product = ({ prod }) => {
         </div>
     )
 }
+

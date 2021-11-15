@@ -27,6 +27,7 @@ import {Product} from "../catalog/product";
 import {Grid} from "@mui/material";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 
 let items = null
@@ -90,11 +91,10 @@ function renderCatalog(prods, cat){
             }
         });
     }
-    console.log('Items: ', items)
     return(items);
 }
 
-export default Catalog;
+export default withRouter(Catalog);
 
 const StyledMenu = styled((props) => (
     <Menu
@@ -132,23 +132,6 @@ const StyledMenu = styled((props) => (
     },
 }));
 
-function updateItems(cat){
-
-    items = []
-    if (cat == null){
-        items = prods
-    } else {
-        for (let i=0; i<prods.length; i++){
-            if (prods[i].Caracteristicas === cat){
-                items.push(prods[i])
-            }
-        }
-    }
-    console.log("aaa:", items);
-
-    return items;
-}
-
 const ButtonAppBar = ({list}) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -164,9 +147,7 @@ const ButtonAppBar = ({list}) => {
         setAnchorEl(null);
         let value = event.currentTarget.innerText
         if (value === 'Seleccionar todo')(value=null);
-        console.log("onClose: ",value)
         items = renderCatalog(prods, value)
-        //items = updateItems(value)
         ReactDOM.render(
             <BrowserRouter>
                 <Grid id='prod-cont' className="productsCol" container justify="center" spacing={4}>
