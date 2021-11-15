@@ -7,12 +7,25 @@ import { ButtonAppBar } from '../catalog/navbarCat'
 import "@progress/kendo-theme-default/dist/all.css";
 import * as ReactDOM from "react-dom";
 
-function CatalogProd(){
+let items = null
+
+const CatalogProd = ({ cat }) => {
 
     const { docs: prods } = useData('Productos');
 
-    let items = []
+    items = []
     let filter = {}
+
+    let newItems = []
+    if (cat == null){
+        newItems = items;
+    } else {
+        for (let i=0; i<items.length; i++){
+            if (items[i].props.children.props.prod.Caracteristicas === cat){
+                newItems.push(items[i]);
+            }
+        }
+    }
 
     prods.map((prod) =>
         items.push(
@@ -45,7 +58,7 @@ function CatalogProd(){
             <div className="catalogRow">
                 <Grid className="productsCol" container justify="center" spacing={4}>
                     {
-                        items
+                        newItems
                     }
                 </Grid>
             </div>
