@@ -49,6 +49,8 @@ const ProductDetails = () => {
     prom.then(function(prod){
         if (prod.exists){
             const { Nombre, Caracteristicas, Precio, Fotos, Marca, Descripcion } = prod.data();
+
+            const maxSteps = Fotos.length;
             ReactDOM.render(
                 <div>
                     <div className="blog-details">
