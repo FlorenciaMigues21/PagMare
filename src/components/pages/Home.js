@@ -12,7 +12,7 @@ function Home() {
             <HeroSection />
             <Cards />
             <Gallery />
-            <InfoSection />
+            <InfoSection path='/info' exact component={InfoSection}/>
             <Direction />
 
         </>

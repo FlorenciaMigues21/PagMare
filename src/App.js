@@ -18,6 +18,7 @@ function App() {
                         <ProductDetails/>
                     </Route>
                 </Switch>
+                <Footer />
             </Router>
         </>
   );

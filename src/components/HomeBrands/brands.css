@@ -13,8 +13,11 @@
     object-fit: contain;
 }
 .alice-carousel img {
-    width: 225px;
+    min-width: 200px;
+    max-width: 200px;
+    border-radius: 50%;
     margin: auto;
+
 }
 .alice-carousel h2 {
     font-size: 25px;
@@ -22,4 +25,11 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
 }
-
+@media only screen and (min-width: 1200px) {
+    .alice-carousel img {
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 220px;
+        max-height: 220px;
+    }
+}

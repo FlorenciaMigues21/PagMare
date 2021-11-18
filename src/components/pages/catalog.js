@@ -198,9 +198,9 @@ const ButtonAppBar = ({list}) => {
                         open={open}
                         onClose={handleNormalClose}
                     >
-                        {
-                            filt
-                        }
+
+                        {filt}
+
                     </StyledMenu>
                 </Toolbar>
             </AppBar>

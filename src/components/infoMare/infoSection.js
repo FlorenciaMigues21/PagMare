@@ -5,9 +5,9 @@ import Clothes from './photo-1512436991641-6745cdb1723f.jpg'
 import 'animate.css';
 
 
-function InfoSection() {
+function InfoSection(){
     return (
-        <div  className="Info">
+        <div className="Info">
             <div className="infoInicial">
             <h2 data-aos="fade-up">NOSOTRAS</h2>
                 <Grid container

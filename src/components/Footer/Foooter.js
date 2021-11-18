@@ -3,38 +3,67 @@ import logoIg from './logoIg.png';
 import logoMare from '../Navbar/logoMare.png'
 import './Footer.css'
 import {Link} from "react-router-dom";
-
+import {Grid,Button} from "@material-ui/core";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import RoomIcon from '@mui/icons-material/Room';
+import MailIcon from '@mui/icons-material/Mail';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 function Foooter() {
     return(
-        <div className="footer-container">
-            <div className='footer-links'>
-                <div className='footer-link-wrapper'>
-                    <div className='footer-link-items'>
-                        <Link to='/sign-up'>Inicio</Link>
-                        <Link to='/'>Nosotras</Link>
-                        <Link to='/'>Tienda</Link>
-                        <Link to='/'>Donde estamos</Link>
-                    </div>
-                    <div className='footer-link-items'>
-                        <h2>Av.Rosales 122, 28021</h2>
-                        <h2>Mail: mare.multimarca@gmail.com</h2>
-                        <h2>Tel:12345678</h2>
-                        <img src={logoIg} width="25,6" height="25,6" alt=""/>
-                        <h6>mare.multimarca.uy</h6>
-                    </div>
-                </div>
-                <div className='footer-link-wrapper'>
-                    <div className='footer-link-items'>
-                        <h2>Videos</h2>
-                        <Link to='/'>Submit Video</Link>
-                        <Link to='/'>Ambassadors</Link>
-                        <Link to='/'>Agency</Link>
-                        <Link to='/'>Influencer</Link>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <Grid container spacing={3}
+                  alignItems="center"
+                  justifyContent="center" style={{backgroundColor:'#faf4f0 ',padding:"50px"}}>
+                <Grid item xs={4}>
+                    <ul className="listaItems">
+                        <li className="firstColumn">
+                            <a href={'/home'}>
+                                Inicio
+                            </a>
+                        </li>
+                        <li className="firstColumn">
+                            <a href={'/#'}>
+                                Nosotras
+                            </a>
+                        </li>
+                        <li className="firstColumn">
+                            <a href={'/catalog'}>
+                                Tienda
+                            </a>
+                        </li>
+                        <li className="firstColumn">
+                            <a href={'/#'}>
+                                Donde estamos
+                            </a>
+                        </li>
+                    </ul>
+                </Grid>
+                <Grid item xs={4}>
+                    <ul className="listaItems">
+                        <li className="secondColumn">
+                            <RoomIcon/>
+                            <h4>Av.Rosales 122, 28021</h4>
+                        </li>
+                        <li className="secondColumn">
+                            <MailIcon/>
+                            <h4>mare.multimarca@gmail.com</h4>
+                        </li>
+                        <li className="secondColumn">
+                            <WhatsAppIcon/>
+                            <h4>12345678</h4>
+                        </li>
+                        <li className="secondColumn" id="ig">
+                            <Button style={{textTransform:"capitalize",fontFamily:"Open Sans, sans-serif"}} startIcon={<InstagramIcon />}>
+                                Instagram
+                            </Button>
+                        </li>
+                    </ul>
+                </Grid>
+                <Grid item xs={4}>
+
+                </Grid>
+            </Grid>
     )
 }
 
