@@ -48,3 +48,12 @@ h3 {
     line-height: 1.5;
     margin-top: 100px;
 }
+
+.listaButtons{
+    list-style: none;
+}
+
+.listaButtons li{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

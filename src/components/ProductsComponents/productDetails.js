@@ -4,7 +4,7 @@ import { database as db } from '../../firebase/config';
 import './productDetails.css'
 import ReactDOM from "react-dom";
 import { getDoc, doc } from "firebase/firestore";
-import {ButtonBase, Grid, TextField} from "@material-ui/core";
+import {ButtonBase, Grid, Menu, TextField} from "@material-ui/core";
 import { styled } from '@mui/material/styles';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { useTheme } from '@mui/material/styles';
@@ -16,12 +16,76 @@ import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
-import Menu from "@mui/material/Menu";
-import {grey} from "@mui/material/colors";
 import MenuItem from "@mui/material/MenuItem";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
+export const PositionedMenu = ({list, title}) =>{
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    console.log("Entro en PosMenu")
+
+    if (list == null){
+        console.log("Colores es null")
+        return <></>
+    }
+
+    let items = [];
+
+    console.log("List: ", list)
+    console.log("Largo lista", list.length)
+    console.log("caca")
+
+    for (let i=0; i<list.length; i++){
+        console.log("COLOR", list[i])
+        items.push(
+            <MenuItem onClick={handleClose} disableRipple>
+                {list[i]}
+            </MenuItem>
+        );
+    }
+
+    return (
+        <div>
+            <Button
+                id="demo-positioned-button"
+                aria-controls="demo-positioned-menu"
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleClick}
+                variant="contained"
+                style={{color:"white",backgroundColor:"#3c564f",textTransform:"capitalize",fontFamily:"Open Sans, sans-serif"}}
+            >
+                {title}
+            </Button>
+            <Menu
+                id="demo-positioned-menu"
+                aria-labelledby="demo-positioned-button"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                }}
+            >
+                {
+                    items
+                }
+            </Menu>
+        </div>
+    );
+}
 
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -53,11 +117,15 @@ const ProductDetails = () => {
             const maxSteps = Fotos.length;
             ReactDOM.render(
                 <div>
-                    <div className="blog-details">
-                        <Grid container spacing={3}>
-                            <Grid item xs={6} alignItems="center"
-                                  justifyContent="center">
-                                <Box className="First" sx={{ maxWidth: 600, flexGrow: 1 }}>
+                    <div className="blog-details" style={{paddingTop:'80px',paddingBottom:'90px'}}>
+                        <Grid container spacing={3} alignItems="center"
+                              justifyContent="center">
+                            <Grid item xl={2}>
+
+                            </Grid>
+                            <Grid item sm={6} lg={6} xl={4} alignItems="center"
+                                  justifyContent="center" style={{textAlign:"center"}}>
+                                <Box className="First" sx={{ maxWidth: 600, flexGrow: 1 }} style={{marginLeft:"50px"}}>
                                     <Paper
                                         square
                                         elevation={0}
@@ -126,22 +194,23 @@ const ProductDetails = () => {
                                     />
                                 </Box>
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item sm={6} lg={6} xl={4}>
                                 <h3 className="principal">{Nombre}</h3>
                                 <h3 className="price"> ${Precio}</h3>
                                 <h3 className="brand">{Marca}</h3>
-                                <TextField  id="outlined-basic" style={{width:"200px", marginBottom:"25px",borderColor:"Black", alignItems:"center", justifySelf:"center"}} label="Talle" variant="outlined" />
-                                <TextField  id="outlined-basic" style={{width:"100px",marginLeft:"25px", marginBottom:"25px",borderColor:"Black", alignItems:"center", justifySelf:"center"}} label="Cantidad" variant="outlined" />
-                                <Button style={{backgroundColor:'#abc2b8',color:'white',
-                                    display:"block",
-                                    width: "100%",
-                                    lineHeightt: 1.4,
-                                    paddingLeft: "5px",
-                                    paddingRight: "5px",
-                                    whiteSpace: "normal",
-                                    marginTop: 0,
-                                    minHeight: "44px"}}>Agregar al carro</Button>
-                                <h3 className="desc"> {Descripcion}</h3>
+                                <ul className="listaButtons">
+                                    <li>
+                                        <PositionedMenu list={Colores} title={"Colores disponibles"}/>
+                                    </li>
+                                    <li>
+                                        <PositionedMenu list={Talle} title={"Talles disponibles"}/>
+                                    </li>
+                                </ul>
+                                <h3 className="desc" style={{textAlign:"justify"}}> {Descripcion}</h3>
+
+                            </Grid>
+                            <Grid item xl={2}>
+
                             </Grid>
                         </Grid>
                     </div>

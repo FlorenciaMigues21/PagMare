@@ -75,7 +75,8 @@ function renderCatalog(prods, cat){
     if (cat == null){
         prods.map((prod) =>
             items.push(
-                <Grid key={prod.id} item xs={12} sm={6} md={4} lg={4}>
+                <Grid key={prod.id} item xs={12} sm={6} md={4} lg={4} alignItems="center"
+                      justifyContent="center">
                     <Product key={prod.id} prod={prod}/>
                 </Grid>
             )
@@ -175,7 +176,7 @@ const ButtonAppBar = ({list}) => {
 
 
     return (
-        <Box sx={{ flexGrow: 1,boxShadow: "none" }}>
+        <Box sx={{ flexGrow: 1,boxShadow: "none",paddingTop:'60px'}}>
             <AppBar position="static" elevation={0} style={{background: 'white'}}>
                 <Toolbar>
                     <Button

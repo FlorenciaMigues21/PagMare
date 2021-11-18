@@ -19,7 +19,7 @@ function InfoSection(){
                     <p>
                 MARÉ es una tienda multimarca en donde pueden encontrar variedad de productos de marcas
                 uruguayas.
-                Nuestro objetivo como multimarca es impulsar el diseño y la mano de obra local. Por esto decidimos crear un espacio en donde marcas/emprendimientos puedan exponer sus productos y lograr
+                Nuestro objetivo como multimarca es impulsar el diseño y la mano de obra local. Por esto decidimos crear un espacio en donde marcas/emprendimientos puedan exponer sus productos y lograr
                 de esta manera un crecimiento.
                     </p>
                 </Grid>

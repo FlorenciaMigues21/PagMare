@@ -16,7 +16,7 @@ export const Brand = ({ brand }) => {
     return (
         <div>
             <img src={logo} alt={id}/>
-            <h2>{nombre}</h2>
+
         </div>
     )
 }

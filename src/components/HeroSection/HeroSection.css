@@ -12,7 +12,7 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
 
 .hero-container{
     background: url(../HeroSection/portada.jpg) center center/cover no-repeat;
-    height: 50vh;
+    height: 600px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -43,18 +43,26 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
     .hero-content{
         max-width: 300px;
         justify-content: center;
+
+    }
+    .hero-container{
+        height: 600px;
     }
 }
 
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 1500px){
     .hero-content {
         max-width: 500px;
         background: rgba(255, 255, 255, 0.4);
         margin:auto;
+
     }
     .hero-content h2 {
         font-size: 80px;
 
+    }
+    .hero-container{
+        min-height: 800px;
     }
 }
 
@@ -64,6 +72,7 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
         max-width: 500px;
         background: rgba(255, 255, 255, 0.4);
         margin-top: auto;
+        height: 500px;
     }
 
     .hero-content h2 {
@@ -81,6 +90,7 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
         font-size: 15px;
         padding: 17px 34px;
     }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -88,12 +98,15 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
         max-width: 500px;
         background: rgba(255, 255, 255, 0.4);
         justify-content: center;
-        margin-top: auto;
+        margin-top: 100px;
     }
 
     .hero-content h2 {
         font-size: 40px;
 
+    }
+    .hero-container{
+        height: 400px;
     }
 
 
@@ -104,7 +117,10 @@ h2 { font-size: 66px; font-weight: 700; line-height: 80px; opacity: 1; font-fami
         max-width: 400px;
         background: rgba(255, 255, 255, 0.4);
         justify-content: center;
-        margin-top: auto;
+        margin-top: 150px;
+    }
+    .hero-container{
+        height: 400px;
     }
 
 }

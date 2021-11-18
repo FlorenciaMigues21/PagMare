@@ -8,7 +8,7 @@ function HeroSection() {
             <div className="hero-content">
                 <h2 className="portada" data-aos="fade-up">¡GRAN APERTURA!</h2>
                 <div className="hero-btns">
-                    <Button className="btns" buttonStyle="btn--outline" buttonSize="btn--large">
+                    <Button href="/tienda" className="btns" buttonStyle="btn--outline" buttonSize="btn--large">
                         Ver catálogo
                     </Button>
                 </div>
