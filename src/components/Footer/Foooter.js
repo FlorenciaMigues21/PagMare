@@ -62,7 +62,6 @@ function Foooter() {
                     </ul>
                 </Grid>
                 <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
-                    <a href="https://www.google.com.uy/maps/place/Juan+Gorlero+838,+20100+Punta+del+Este,+Departamento+de+Maldonado/@-34.9606913,-54.9441452,17z/data=!3m1!4b1!4m5!3m4!1s0x9575056d7eb38d2f:0x49ad62804ff6c467!8m2!3d-34.9606957!4d-54.9419565?hl=es-419"><img src={mapa} alt="mapa"/></a>
                 </Grid>
             </Grid>
     )

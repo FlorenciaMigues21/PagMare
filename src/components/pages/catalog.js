@@ -1,25 +1,15 @@
 import React from 'react';
 import '../../App.css'
-import CatalogProd from '../catalog/catalogProd'
 import "@progress/kendo-theme-default/dist/all.css";
 import {useData} from "../../hooks/useData";
-import {useDataByCat} from "../catalog/catalogHook";
-
+import EditIcon from '@mui/icons-material/Edit';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import EditIcon from '@mui/icons-material/Edit';
-import Divider from '@mui/material/Divider';
-import ArchiveIcon from '@mui/icons-material/Archive';
-import FileCopyIcon from '@mui/icons-material/FileCopy';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { grey } from '@mui/material/colors';
 import '../catalog/navbarCatCSS.css'
@@ -28,7 +18,10 @@ import {Grid} from "@mui/material";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
-
+import ArchiveIcon from '@mui/icons-material/Archive';
+import FileCopyIcon from '@mui/icons-material/FileCopy';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
+import Divider from "@mui/material/Divider";
 
 let items = null
 let prods = null
@@ -112,7 +105,7 @@ const StyledMenu = styled((props) => (
     />
 ))(({ theme }) => ({
     '& .MuiPaper-root': {
-
+        borderRadius: 6,
         marginTop: theme.spacing(1),
         minWidth: 180,
         color:
@@ -125,6 +118,7 @@ const StyledMenu = styled((props) => (
                 fontSize: 18,
                 color: theme.palette.text.secondary,
                 marginRight: theme.spacing(1.5),
+                display:"none",
             },
             '&:active': {
                 backgroundColor: grey[50],
@@ -162,7 +156,7 @@ const ButtonAppBar = ({list}) => {
     let filt = []
 
     filt.push(
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={handleClose} disableRipple style={{display:"none"}}>
             Seleccionar todo
         </MenuItem>
     )
@@ -176,7 +170,7 @@ const ButtonAppBar = ({list}) => {
 
 
     return (
-        <Box sx={{ flexGrow: 1,boxShadow: "none",paddingTop:'60px'}}>
+        <Box sx={{ flexGrow: 1,boxShadow: "none",paddingTop:'100px'}}>
             <AppBar position="static" elevation={0} style={{background: 'white'}}>
                 <Toolbar>
                     <Button
@@ -199,9 +193,7 @@ const ButtonAppBar = ({list}) => {
                         open={open}
                         onClose={handleNormalClose}
                     >
-
                         {filt}
-
                     </StyledMenu>
                 </Toolbar>
             </AppBar>
