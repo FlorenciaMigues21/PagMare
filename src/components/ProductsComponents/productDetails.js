@@ -90,8 +90,7 @@ export const PositionedMenu = ({list, title}) =>{
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const ProductDetails = () => {
-    const idProd = useParams()
-    console.log("idProd: ", idProd.id)
+    const idProd = useParams();
     let prom = getDoc(doc(db, 'Productos', idProd.id))
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
@@ -108,11 +107,10 @@ const ProductDetails = () => {
     const handleStepChange = (step) => {
         setActiveStep(step);
     };
-    console.log("Promise: ", prom)
 
     prom.then(function(prod){
         if (prod.exists){
-            const { Nombre, Caracteristicas, Precio, Fotos, Marca, Descripcion } = prod.data();
+            const { Nombre, Caracteristicas, Precio, Fotos, Marca, Descripcion, Colores, Talle } = prod.data();
 
             const maxSteps = Fotos.length;
             ReactDOM.render(
