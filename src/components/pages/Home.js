@@ -12,9 +12,8 @@ function Home() {
             <HeroSection />
             <Cards />
             <Gallery />
-            <InfoSection path='/info' exact component={InfoSection}/>
+            <InfoSection path='/info' exact component={InfoSection} style="padding-top: 80px;"/>
             <Direction />
-
         </>
     );
 }

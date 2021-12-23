@@ -7,7 +7,7 @@ import 'animate.css';
 
 function InfoSection(){
     return (
-        <div className="Info">
+        <div className="Info" id="info">
             <div className="infoInicial">
             <h2 data-aos="fade-up">NOSOTRAS</h2>
                 <Grid container
@@ -16,13 +16,13 @@ function InfoSection(){
                       alignItems="center" className="col">
 
                     <Grid item xs={12} xl={6} sm={12} md={6} className="item1">
-                    <p>
-                MARÉ es una tienda multimarca en donde pueden encontrar variedad de productos de marcas
-                uruguayas.
-                Nuestro objetivo como multimarca es impulsar el diseño y la mano de obra local. Por esto decidimos crear un espacio en donde marcas/emprendimientos puedan exponer sus productos y lograr
-                de esta manera un crecimiento.
-                    </p>
-                </Grid>
+                        <p>
+                            MARÉ es una tienda multimarca en donde pueden encontrar variedad de productos de marcas
+                            uruguayas.
+                            Nuestro objetivo como multimarca es impulsar el diseño y la mano de obra local. Por esto decidimos crear un espacio en donde marcas/emprendimientos puedan exponer sus productos y lograr
+                            de esta manera un crecimiento.
+                        </p>
+                    </Grid>
                     <Grid item xs={12} xl={6} sm={12} md={6}   className="item2">
                         <img className="imagen" src={Clothes} alt="ropa"/>
                     </Grid>

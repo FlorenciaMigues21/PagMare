@@ -4,7 +4,7 @@ import {Button} from '../Buttons/Button'
 
 function HeroSection() {
     return (
-        <div  className="hero-container">
+        <div  className="hero-container" id="mare">
             <div className="hero-content">
                 <h2 className="portada" data-aos="fade-up">¡GRAN APERTURA!</h2>
                 <div className="hero-btns">
@@ -16,7 +16,5 @@ function HeroSection() {
         </div>
     )
 }
-
-
 
 export default HeroSection

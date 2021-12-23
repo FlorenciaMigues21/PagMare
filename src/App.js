@@ -11,16 +11,16 @@ function App() {
         <>
             <Router>
                 <Navbar />
-                <Switch>
-                    <Route path='/tienda' exact component={withRouter(Catalog)}/>
-                    <Route path='/home' exact component={Home}/>
-                    <Route path="/product/:id">
-                        <ProductDetails/>
-                    </Route>
-                    <Route exact path="/">
-                        <Redirect to="/Home" />
-                    </Route>
-                </Switch>
+                    <Switch>
+                        <Route path='/tienda' exact component={withRouter(Catalog)}/>
+                        <Route path='/home' exact component={Home}/>
+                        <Route path="/product/:id">
+                            <ProductDetails/>
+                        </Route>
+                        <Route exact path="/">
+                            <Redirect to="/Home" />
+                        </Route>
+                    </Switch>
                 <Footer />
             </Router>
         </>
