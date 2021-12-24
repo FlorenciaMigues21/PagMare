@@ -12,14 +12,14 @@ export const MenuItems = [
     },
 
     {
-        title: 'Tienda',
-        url: '/tienda',
+        title: 'Donde comprar',
+        url: 'home#contenido',
         cName: 'nav-links'
     },
 
     {
-        title: 'Donde comprar',
-        url: 'home#contenido',
+        title: 'Tienda',
+        url: '/tienda',
         cName: 'nav-links'
     },
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import {Grid} from '@material-ui/core';
-import mapa from './mapa.png'
-import './Direction.css'
+import mapa from './mapa.png';
+import './Direction.css';
+import { GMapClass } from "../Maps/GMap";
+
 
 function Direction(){
     return (
@@ -44,7 +46,7 @@ function Direction(){
                         </div>
                     </Grid>
                     <Grid item xs={12} xl={6} sm={12} md={6} className="item2">
-                        <a href="https://www.google.com.uy/maps/place/Juan+Gorlero+838,+20100+Punta+del+Este,+Departamento+de+Maldonado/@-34.9606913,-54.9441452,17z/data=!3m1!4b1!4m5!3m4!1s0x9575056d7eb38d2f:0x49ad62804ff6c467!8m2!3d-34.9606957!4d-54.9419565?hl=es-419"><img src={mapa} alt="mapa"/></a>
+                        <GMapClass/>
                     </Grid>
                 </Grid>
             </div>
@@ -53,3 +55,5 @@ function Direction(){
 }
 
 export default Direction
+
+// <a href="https://www.google.com.uy/maps/place/Juan+Gorlero+838,+20100+Punta+del+Este,+Departamento+de+Maldonado/@-34.9606913,-54.9441452,17z/data=!3m1!4b1!4m5!3m4!1s0x9575056d7eb38d2f:0x49ad62804ff6c467!8m2!3d-34.9606957!4d-54.9419565?hl=es-419"><img src={mapa} alt="mapa"/></a>
