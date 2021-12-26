@@ -1,19 +1,19 @@
 export const MenuItems = [
     {
         title: 'Inicio',
-        url: 'home#mare',
+        url: '/home#mare',
         cName: 'nav-links'
     },
 
     {
         title: 'Nosotras',
-        url: 'home#info',
+        url: '/home#info',
         cName: 'nav-links'
     },
 
     {
         title: 'Donde comprar',
-        url: 'home#contenido',
+        url: '/home#contenido',
         cName: 'nav-links'
     },
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {Grid} from '@material-ui/core';
 import mapa from './mapa.png';
 import './Direction.css';
-import { GMapClass } from "../Maps/GMap";
+import { GMapClass } from "../PrimeReact/Maps/GMap";
 
 
 function Direction(){

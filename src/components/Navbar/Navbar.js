@@ -12,12 +12,12 @@ class Navbar extends Component {
         this.setState({clicked: !this.state.clicked})
     }
 
-
-
     render() {
         return(
             <nav className="NavbarItems">
-                <h1 className="navbar-logo"><img className="navbar-img" src={logoMare} alt="Logo"/></h1>
+                <a href={"/home#mare"}>
+                    <h1 className="navbar-logo"><img className="navbar-img" src={logoMare} alt="Logo"/></h1>
+                </a>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}> </i>
                 </div>
