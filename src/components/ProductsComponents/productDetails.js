@@ -29,18 +29,12 @@ export const PositionedMenu = ({list, title}) =>{
         setAnchorEl(null);
     };
 
-    console.log("Entro en PosMenu")
-
     if (list == null){
-        console.log("Colores es null")
         return <></>
     }
 
     let items = [];
 
-    console.log("List: ", list)
-    console.log("Largo lista", list.length)
-    console.log("caca")
 
     for (let i=0; i<list.length; i++){
         console.log("COLOR", list[i])
@@ -118,10 +112,7 @@ const ProductDetails = () => {
                     <div className="blog-details" style={{paddingTop:'80px',paddingBottom:'90px'}}>
                         <Grid container spacing={3} alignItems="center"
                               justifyContent="center">
-                            <Grid item xl={2}>
-
-                            </Grid>
-                            <Grid item sm={6} lg={6} xl={4} alignItems="center"
+                            <Grid className={'little'} item sm={6} lg={6} xl={4} alignItems="center"
                                   justifyContent="center" style={{textAlign:"center"}}>
                                 <Box className="First" sx={{ maxWidth: 600, flexGrow: 1 }} style={{marginLeft:"50px"}}>
                                     <Paper
@@ -192,7 +183,7 @@ const ProductDetails = () => {
                                     />
                                 </Box>
                             </Grid>
-                            <Grid item sm={6} lg={6} xl={4}>
+                            <Grid className={'little'} item sm={6} lg={6} xl={4}>
                                 <h3 className="principal">{Nombre}</h3>
                                 <h3 className="price"> ${Precio}</h3>
                                 <h3 className="brand">{Marca}</h3>
@@ -227,7 +218,7 @@ const ProductDetails = () => {
         console.log('No se puede acceder al producto', error)
     });
     return (
-        <div id={idProd.id}>
+        <div className={'page'} id={idProd.id}>
         </div>
     );
 }

@@ -1,8 +1,12 @@
-h3 {
+body{
+    padding-left: 80px;
+    padding-right: 80px;
 }
-.First{
-    margin-left: 40px;
+
+.little {
+    transform: scale(1);
 }
+
 .principal{
     margin-top: 20px;
     font-size: 2.1875em;

@@ -14,7 +14,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { grey } from '@mui/material/colors';
 import '../catalog/navbarCatCSS.css'
 import {Product} from "../catalog/product";
-import {Grid} from "@mui/material";
+import {Grid as muGrid} from "@mui/material";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
@@ -52,11 +52,11 @@ function Catalog() {
                 <ButtonAppBar list={filter}/>
             </div>
             <div id='catalog-cont' className='catalogRow'>
-                <Grid id='prod-cont' className="productsCol" container justify="center" spacing={4}>
+                <muGrid id='prod-cont' className="productsCol" container justify="center" spacing={4}>
                     {
                         items
                     }
-                </Grid>
+                </muGrid>
             </div>
         </>
     );
@@ -68,19 +68,21 @@ function renderCatalog(prods, cat){
     if (cat == null){
         prods.map((prod) =>
             items.push(
-                <Grid key={prod.id} item xs={12} sm={6} md={4} lg={4} alignItems="center"
+                <muGrid key={prod.id} item xs={12} sm={6} md={4} lg={4} alignItems="center"
                       justifyContent="center">
                     <Product key={prod.id} prod={prod}/>
-                </Grid>
+                </muGrid>
             )
         )
     } else {
         prods.map((prod) => {
             if (prod.Caracteristicas === cat) {
                 items.push(
-                    <Grid key={prod.id} item xs={12} sm={6} md={4} lg={4}>
-                        <Product key={prod.id} prod={prod}/>
-                    </Grid>
+                    <div className={'prod'}>
+                        <muGrid key={prod.id} item xs={12} sm={6} md={4} lg={4}>
+                            <Product key={prod.id} prod={prod}/>
+                        </muGrid>
+                    </div>
                 )
             }
         });
@@ -145,9 +147,9 @@ const ButtonAppBar = ({list}) => {
         items = renderCatalog(prods, value)
         ReactDOM.render(
             <BrowserRouter>
-                <Grid id='prod-cont' className="productsCol" container justify="center" spacing={4}>
+                <muGrid id='prod-cont' className="productsCol" container justify="center" spacing={4}>
                     {items}
-                </Grid>
+                </muGrid>
             </BrowserRouter>,
             document.getElementById('catalog-cont')
         );

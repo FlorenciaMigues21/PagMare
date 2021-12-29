@@ -14,3 +14,12 @@
     display:list-item!important;
     list-style: none!important;
 }
+
+#big-container {
+    padding-top: 80px;
+}
+
+.catalogRow{
+    padding: 30px 100px 100px;
+    justify-content: space-evenly;
+}

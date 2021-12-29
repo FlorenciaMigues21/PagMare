@@ -13,6 +13,7 @@ import mapa from "../infoMare/mapa.png";
 
 function Foooter() {
     return(
+        <div className={'foot'}>
             <Grid container spacing={3}
                   alignItems="center"
                   justifyContent="center" style={{backgroundColor:'#faf4f0 ',padding:"50px"}}>
@@ -64,6 +65,7 @@ function Foooter() {
                 <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
                 </Grid>
             </Grid>
+        </div>
     )
 }
 
