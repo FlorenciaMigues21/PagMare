@@ -110,7 +110,7 @@ export class GMapClass extends Component {
 
         return (
             <div>
-                <Toast ref={(el) => { this.toast = el; }}></Toast>
+                <Toast ref={(el) => { this.toast = el; }}/>
 
                 {
                     this.state.googleMapsReady && (
