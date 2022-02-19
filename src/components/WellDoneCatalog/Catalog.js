@@ -53,7 +53,6 @@ export function Catalog(){
             <div id={'filter-container'}>
 
             </div>
-
         </div>
     )
 
