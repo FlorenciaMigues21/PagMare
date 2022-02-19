@@ -1,46 +1,32 @@
-.listaItems{
-    margin-left: 70px;
-    text-decoration: none;
-    list-style: none;
-}
 
-.firstColumn{
-    padding: 20px;
-}
-.listaItems a{
-    text-decoration: none;
+.textInfo{
     color: #616464;
     font-family: 'Open Sans', sans-serif;
-
-}
-
-.listaItems a:hover{
-    color: black;
-    transition: all 0.2s ease-out;
-}
-
-.secondColumn{
-    font-size: 15px;
     text-decoration: none;
-
-    font-family: 'Open Sans', sans-serif;
-    padding: 10px;
-    justify-content: center;
-    align-content: center;
-}
-.secondColumn h4{
+    font-size: 15px;
     font-weight: 200;
     letter-spacing: normal;
 }
-.secondColumn #id{
+.itemGridFooter a {
+    text-decoration: none;
+    color: #616464;
+    font-family: 'Open Sans', sans-serif;
+}
+.itemGridFooter li {
+    list-style: none;
+}
+.itemGridFooter a:hover{
+    color: black;
+    transition: all 0.2s ease-out;
+}
+.itemGridFooter{
     justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
 }
 
-.item2 img{
-    max-width: 100%;
-    height: auto;
 
-}
 
 .foot {
     margin-left: 12px;
